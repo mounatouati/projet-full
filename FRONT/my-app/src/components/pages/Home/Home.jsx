@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContext';
 import Auth from '../Auth/Auth'
 import ListeArticles from '../ListeArticles/ListeArticles';
 
 
 export default function Home() {
     
-  const userFromDb = {
-    id: 1,
-    email: "mouna@",
-    username: "mouna",
-    avatar: null,
-}
-const [user, setUser] = useState(null);
+const {user} = useContext(UserContext);
   return (
     <div>   
         {user === null ? <Auth /> : <ListeArticles/>}

@@ -67,14 +67,25 @@ Pages:
 
 Containers : LoginForm 
              SignupForm
-
+             profil
 # Back creer la Base de donnée  
   
-  -Creer une base de données sur MongoDB 
+  -Creer une base de données sur MongoDB (projet)
   -initialiser la connection dans le fichier servers.js 
-- creer les: - models 
-             - routes
-             - controllers
-- creer le fichier token.js (pour recuperer et verifier un token )
+* utilisateur 
+- creer les: 
+  * models (user)
+  * routes (user)  usersRouter.post("/signup", addUser);
+                              usersRouter.post("/login", loginUser);
+                              usersRouter.get("/secret", sercretUser);
+                              usersRouter.get("/me", getUser);
+  * controllers (addUser, loginUser, sercretUser, getUser ) 
+- creer le fichier token.js (pour recuperer et verifier un token :  verifyToken et signToken )
+
+# Frond : gérer la base de donnée 
+- Inscription 
+- Connexion 
+- Afficher profil utilisateur 
+- Ajouter des articles 
 
    							
